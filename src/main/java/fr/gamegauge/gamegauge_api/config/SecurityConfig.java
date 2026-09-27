@@ -38,11 +38,12 @@ public class SecurityConfig {
     // Liste des URLs publiques
     private static final String[] PUBLIC_URLS = {
             "/api/auth/**",
+            // -- Supervision (Prometheus, sondes Kubernetes) --
+            "/actuator/**",
             // -- Swagger UI v3 (OpenAPI) --
             "/v3/api-docs/**",
             "/swagger-ui/**",
-            "/swagger-ui.html",
-            "/api/auth/**"
+            "/swagger-ui.html"
     };
 
     // Mettre à jour le constructeur
